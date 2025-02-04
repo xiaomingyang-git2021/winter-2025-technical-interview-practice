@@ -12,6 +12,12 @@
  */
 function isPalindrome(str) {
   // your code here
+  // change str to lowercase
+  str = str.toLowerCase();
+  // Remove non-alphanumeric characters using regular expressions
+  str = str.replace(/[^a-z0-9]/g, "");
+  // Determine whether the processed string is equal to its reversed string
+  return str === str.split("").reverse().join("");
 }
 
 module.exports = isPalindrome;
